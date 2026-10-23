@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 4rem;
+}
+.text-home{
+    display: flex;
+    flex-direction: column;
+    max-width: 368px;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
+    gap: 1rem;
+    color: white;
+}
+.text-home h1{
+    font-size: 32px;
+}
+.text-home span{
+    color: #E4105D;
+}
+
+.home-btn div{
+    background-color: #E4105D;
+    padding: 0.4rem 2rem;
+    border-radius: 27px;
+}
+.home-btn{
+    background-color: transparent;
+    border: 1px solid #E4105D;
+    border-radius: 29px;
+    padding: 0.3rem 0.3rem;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    margin-top: 30px;
+}
+@media (max-width: 400px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .text-home{
+        align-items: center;
+        text-align: center;
+    }
+}

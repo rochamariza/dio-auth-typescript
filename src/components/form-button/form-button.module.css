@@ -1,0 +1,15 @@
+.form-btn div{
+    background-color: #E4105D;
+    padding: 0.4rem 2rem;
+    border-radius: 27px;
+}
+.form-btn{
+    background-color: transparent;
+    border: 1px solid #E4105D;
+    border-radius: 29px;
+    padding: 0.3rem 0.3rem;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    margin-top: 30px;
+}

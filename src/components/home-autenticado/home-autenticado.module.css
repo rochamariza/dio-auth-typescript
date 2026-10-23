@@ -1,0 +1,42 @@
+.container{
+    margin: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 3rem;
+    align-self: start;
+}
+.feed h1, .top h1{
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+.feed{
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    grid-row: 1;
+    gap: 3rem;
+}
+.lista{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (max-width: 700px) {
+    .container{
+        grid-template-columns: repeat(1, auto);
+    }
+    .top{
+        grid-column: 1;
+        grid-row: 1;
+    }
+}

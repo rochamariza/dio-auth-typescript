@@ -1,0 +1,87 @@
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1.4rem 4rem;
+    background-color: black;
+}
+.container-nao-autenticado{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 1.4rem 4rem;
+    background-color: black;
+    gap: 3rem;
+}
+.nav-btns{
+    display: flex;
+    gap: 1.3rem;
+}
+.nav-btns a{
+    color: white;
+    font-size: 18px;
+}
+.nav-btns a:link{
+    text-decoration: none;
+
+}
+.secondary-btn{
+    width: 120px;
+    height: 25px;
+    background-color: #565656;
+    border: none;
+    border-radius: 11px;
+    text-align: center;
+}
+
+.abas{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.abas a{
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+.abas a:link{text-decoration: none;}
+.search-input{
+    background-color: #2D2D37;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 18px;
+}
+.input-container{
+    position: relative;
+}
+.input-container img{
+    position: absolute;
+    left: 12px;
+    top: 30%;
+}
+.profile{
+    display: flex;
+    margin-left: auto;
+}
+.profile img{
+    width: 41px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.logo{
+    width: 63px;
+    height: 25px;
+}
+@media (max-width: 400px){
+    .container{
+        justify-content: center;
+    }
+    .container img{
+        display: none;
+    }
+    .logo, .abas a{
+        display: none;
+    }
+}

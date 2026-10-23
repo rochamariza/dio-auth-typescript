@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+    gap: 1rem;
+    color: white;
+    align-items: center;
+}
+.top-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.top-image{
+    border-radius: 50%;
+    width: 42px;
+    border: 2px solid white;
+    align-self: center;
+}
+.progress-bar{
+    position: relative;
+}
+.empty{
+    background-color: white;
+    height: 9px;
+    width: 100%;
+    border-radius: 9px;
+}
+.fill{
+    position: absolute;
+    top: 0;
+    background-color: #23DD7A;
+    height: 9px;
+    width: 50%;
+    border-radius: 9px;
+}

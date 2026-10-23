@@ -1,0 +1,49 @@
+.cadastro-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6rem;
+    width: 100vw;
+    height: 100%;
+}
+.cadastro-container h4{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+}
+.cadastro-container h1{
+    max-width: 565px;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+}
+.cadastro-container h3{
+    font-size: 18px;
+    font-weight: 400;
+}
+.cadastro-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+    width: 298px;
+}
+
+.extra-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logar{color: #23DD7A;font-weight: 700; font-size: 14px;}
+.logar:link{text-decoration: none;}
+
+@media (max-width:400px){
+    .cadastro-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .cadastro-container h1{
+        max-width: 315px;
+    }
+}
