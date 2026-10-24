@@ -1,1 +1,1 @@
-# Clone da página de cadastro da DIO.me para o bootcamp Orange Tech da DIO
+# Fork do Clone DIO mas convertido para TypeScript e com autenticação
