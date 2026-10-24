@@ -1,6 +1,16 @@
 import styles from './post.module.css'
 
-export const Post = ({src, src_profile, username, tempo, titulo, texto, likes}) => {
+interface PostProps{
+    src: string 
+    src_profile: string
+    username: string 
+    tempo: string 
+    titulo: string 
+    texto: string 
+    likes: string
+}
+
+export const Post = ({src, src_profile, username, tempo, titulo, texto, likes}: PostProps) => {
   return (
     <div className={styles['post-container']}>
         <img src={src} alt='feed-image' className={styles["feed-image"]}/>

@@ -11,7 +11,7 @@ export const Senha = () => {
         <Nav />
         <div className={styles["senha-container"]}>
             <Input src={email} ph="Digite o E-mail" type="text"/>
-            <FormBtn />
+            <FormBtn text='Redefinir'/>
         </div>
     </>
   )
