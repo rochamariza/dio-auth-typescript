@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "nomeCompleto": "Felix Lee",
+      "email": "leefelix2001@gmail.com",
+      "senha": "@asdasdsjdie882321",
+      "id": "_5Cvw7ra1fM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
