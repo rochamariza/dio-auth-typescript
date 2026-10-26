@@ -6,11 +6,31 @@ import { Input } from "../../components/input/input";
 import { FormBtn } from "../../components/form-button/form-button";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth";
+import { useForm, type SubmitHandler } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import  schemaLogin, { type  UserInputSchema } from "../../services/schemaLogin";
+import api from "../../services/api";
+import { useState } from "react";
 export const Login = () => {
   const navigate = useNavigate();
   const { setAutenticado } = useAuth();
-  function changeAuthenticate() {
-    setAutenticado(true);
+  const [ erroLogar, setErroLogar ] = useState<string>("")
+  const { register, handleSubmit, formState: { errors } } = useForm<UserInputSchema>({resolver: yupResolver(schemaLogin)})
+  const onSubmit: SubmitHandler<UserInputSchema> = async (data) => {
+      try{
+        const response = await api.get("/users", {
+          params: {email: data.email, senha:data.senha}
+        })
+        if(response.data.length === 0){
+          setErroLogar("E-mail ou senha inválidos")
+          return 
+        }
+        setAutenticado(true)
+        navigate("/")
+      }
+      catch(error){
+        setErroLogar("Erro ao Logar")
+      }
   }
   return (
     <>
@@ -24,15 +44,13 @@ export const Login = () => {
           <h1>Faça seu cadastro</h1>
           <h3>Faça seu login e make the change._</h3>
           <form
-            action="/"
-            onClick={(e) => {
-              e.preventDefault();
-              changeAuthenticate();
-              navigate("/");
-            }}
+            onSubmit={handleSubmit(onSubmit)}
           >
-            <Input src={email} ph="E-mail" type="text" required />
-            <Input src={senha} ph="Senha" type="password" required />
+            <Input src={email} ph="E-mail" type="text" {...register("email")}/>
+            <p>{errors.email?.message}</p>
+            <Input src={senha} ph="Senha" type="password" {...register("senha")}/>
+            <p>{errors.senha?.message}</p>
+            {erroLogar && <p>{erroLogar}</p>}
             <FormBtn text="Entrar" />
           </form>
           <div className={styles["extra-info"]}>

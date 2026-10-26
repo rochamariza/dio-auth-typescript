@@ -5,6 +5,12 @@
       "email": "leefelix2001@gmail.com",
       "senha": "@asdasdsjdie882321",
       "id": "_5Cvw7ra1fM"
+    },
+    {
+      "nomeCompleto": "Christopher Bahng",
+      "email": "chrisbanhg97@gmail.com",
+      "senha": "Awsd@1408",
+      "id": "-JoAn4O41bo"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
